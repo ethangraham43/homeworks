@@ -39,20 +39,25 @@ describe Dessert do
     it "shuffles the ingredient array" do
       ingredients = ["chocolate", "eggs", "flour"]
       brownie.mix! 
-      
+
     end
   end
 
   describe "#eat" do
     it "subtracts an amount from the quantity" do
+      brownie.eat(1)
+      expect { brownie.eat(101)}.to raise_error("not enough left!")
     end
 
     it "raises an error if the amount is greater than the quantity" do
+      brownie.eat(101)
+      expect
     end
   end
 
   describe "#serve" do
     it "contains the titleized version of the chef's name" do
+      
     end
   end
 
